@@ -67,5 +67,6 @@ aireplay-ng -0 0 -a C4:71:54:23:2A:AE -c EC:D0:9F:87:DD:6F  wlan0mon
 
 -c : the client that connect to AP legally. if not spcecif which client , it will disconnect all the clients which connect to this WI-FI
 
+the client will be disconnected from the AP we input above 
 
 
