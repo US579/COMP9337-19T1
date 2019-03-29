@@ -1,6 +1,9 @@
 # 前言
 
-__author_ = Wanze Liu
+author :  Wanze Liu
+
+data : 29/03/2019
+
 仅供参考,此project为学习之用,了解破解流程,学习无线安全
 
 system : kali linux
