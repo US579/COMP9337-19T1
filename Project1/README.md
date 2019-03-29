@@ -1,8 +1,4 @@
-# 前言
-
-author :  Wanze Liu
-
-data : 29/03/2019
+# 前言[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)]
 
 仅供参考,此project为学习之用,了解破解流程,学习无线安全
 
