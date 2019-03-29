@@ -108,6 +108,7 @@ option routers 192.168.1.129;
 option domain-name-servers 8.8.8.8;
 range 192.168.1.130 192.168.1.140;
 }
+```
 
 after that ,type command below
 
@@ -117,7 +118,6 @@ start web server Apache
 /etc/init.d/apache2.start
 ``` 
  
-```
 4.install mysql-server for storing captured password
  
 ```
