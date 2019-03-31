@@ -17,13 +17,13 @@ WEP carcking and WPA carcking
 
 MAN in the middle of attack 
 
-MARK 100 / 
+* MARK 100 / 
 
 ### LAB4
 
 analysis the SSL protocol by using wireshark
 
-MARK : 100 /
+* MARK : 100 /
 
 ### Project 1
 
@@ -31,7 +31,7 @@ EVIL TWIN ATTACK
 
 the details information is indisde of `project1` file
 
-MARK : 100 /
+* MARK : 100 /
 
 
 
