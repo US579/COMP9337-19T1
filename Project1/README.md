@@ -109,6 +109,13 @@ option domain-name-servers 8.8.8.8;
 range 192.168.1.130 192.168.1.140;
 }
 ```
+launch the DHCP server ,
+
+in kali , use command,
+
+```
+ dhcpd -cf /etc/dhcp/dhcpd.conf
+```
 
 after that ,type command below
 
@@ -132,4 +139,6 @@ after installation ,type
 ```
 /etc/init.d/mysql start
 ```
+
+
 
