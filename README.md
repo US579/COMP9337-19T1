@@ -5,13 +5,13 @@ COMP9337 Securing Wireless Networks 2019T1
 
 analysis the performence of different encrypt algorithem 
 
-MARK : 100 / 100
+* MARK : 100 / 100
 
 ### LAB2
 
 WEP carcking and WPA carcking 
 
-MARK : 100 / 
+* MARK : 100 / 
 
 ### LAB3
 
