@@ -29,7 +29,7 @@ MARK : 100 /
 
 EVIL TWIN ATTACK 
 
-the detial information is indisde of `project1` file
+the details information is indisde of `project1` file
 
 MARK : 100 /
 
