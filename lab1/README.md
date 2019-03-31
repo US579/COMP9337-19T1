@@ -17,7 +17,7 @@
 - In the linux command line, execute "python tempdes.py", where tempdes.py 
 is the python script.
 
-# How to execute 
+## How to execute 
 
 ```
 python run.py
