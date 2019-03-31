@@ -1,6 +1,6 @@
-README
+## README
 
-In this folder you will find the following files:
+### In this folder you will find the following files:
 
 - tempdes.py : is a sample code for encrypting / decrypting using DES
 - temprsa.py : is a sample code for encrypting / decrypting using RSA
