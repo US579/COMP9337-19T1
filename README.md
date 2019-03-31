@@ -9,6 +9,8 @@ MARK : 100 / 100
 
 ## LAB2
 
+WEP carcking and WPA carcking 
+
 MARK : 100 / 
 
 ## LAB3
