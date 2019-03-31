@@ -20,5 +20,5 @@ is the python script.
 ## How to execute 
 
 ```
-python ./python/run.py
+python ./Python/run.py
 ```
