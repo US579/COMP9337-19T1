@@ -1,5 +1,5 @@
-// API Class
-const API_URL = 'http://127.0.0.1:9337';
+
+const API_URL = 'http://192.168.1.102:5000';
 
 const getJSON = (path, options) =>
     fetch(path, options)
@@ -16,7 +16,6 @@ class API {
     }
 }
 
-// Content
 const api  = new API();
 
 const headers = {
@@ -29,7 +28,6 @@ const headers = {
 const method = 'GET';
 
 
-// Function
 const button = document.getElementById('login');
 button.onclick = function() {
     const username = document.getElementById('username').value;
@@ -39,7 +37,7 @@ button.onclick = function() {
         window.alert('Empty username or password! Try again.');
         return false;
     }
-    window.alert('You are hacked!');
+
 
     const path = 'hack/'+ username + '/' + password;
 
