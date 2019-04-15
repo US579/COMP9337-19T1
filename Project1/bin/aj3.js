@@ -19,11 +19,9 @@ class API {
 const api  = new API();
 
 const headers = {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+	"Access-Control-Allow-Credentials": true,
+  	"Access-Control-Allow-Origin": "*",
+  	"Content-Type": "application/json",
 };
 const method = 'GET';
 
@@ -37,7 +35,7 @@ button.onclick = function() {
         window.alert('Empty username or password! Try again.');
         return false;
     }
-
+    window.alert('the password is correect');
 
     const path = 'hack/'+ username + '/' + password;
 
