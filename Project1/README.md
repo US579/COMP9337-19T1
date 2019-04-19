@@ -78,7 +78,7 @@ the client will be disconnected from the AP we input above
 airbase-ng -a AA:AA:AA:AA:AA:AA --essid 'Starbucks' -c 11 wlan0mon
 ```
 
--a :set up MAC address 
+-a :set up MAC address (this is optional)
 
 -essid : the name of AP ,this should be same as the target WI-FI
 
