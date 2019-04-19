@@ -59,18 +59,7 @@ airodump-ng -c 11 -i wlan0 --bssid C4:71:54:23:2A:AE
 
 this command only show the traffic between client and target AP
 
-## 3. attack target by using aireplay-ng
-```
-aireplay-ng -0 0 -a C4:71:54:23:2A:AE -c EC:D0:9F:87:DD:6F  wlan0mon
-```
-
--0 : Conflict attack mode , follow by the attack times , 0 represent all the times
-
--a : the MAC of AP  , this can be captured from the `airodump-ng wlan0mon`
-
--c : the client that connect to AP legally. if not spcecif which client , it will disconnect all the clients which connect to this WI-FI
-
-## 4. Set up a fake AP impersonating the target AP
+## 3. Set up a fake AP impersonating the target AP
 
 the client will be disconnected from the AP we input above 
 
@@ -83,6 +72,19 @@ airbase-ng -a AA:AA:AA:AA:AA:AA --essid 'Starbucks' -c 11 wlan0mon
 -essid : the name of AP ,this should be same as the target WI-FI
 
 -c : channel 11
+
+## 4. deauth target by using aireplay-ng
+```
+aireplay-ng -0 0 -a C4:71:54:23:2A:AE -c EC:D0:9F:87:DD:6F  wlan0mon
+```
+
+-0 : Conflict attack mode , follow by the attack times , 0 represent all the times
+
+-a : the MAC of AP  , this can be captured from the `airodump-ng wlan0mon`
+
+-c : the client that connect to AP legally. if not spcecif which client , it will disconnect all the clients which connect to this WI-FI
+
+
 
 ###  DHCP server 
 
