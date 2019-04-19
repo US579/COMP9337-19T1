@@ -49,7 +49,7 @@ coverage.xml
 .hypothesis/
 .idea/
 breport/
-conf/
+#conf/
 tmp/
 # Translations
 *.mo
@@ -100,3 +100,4 @@ ENV/
 
 #others
 .DS_Store
+recording
