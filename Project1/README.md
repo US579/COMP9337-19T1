@@ -2,8 +2,6 @@
 
 仅供参考,此project为学习之用,了解破解流程,学习无线安全
 
-__author__ == "US579"
-
 The recording file is in the link below:
 
 https://drive.google.com/open?id=1EdF8AQh95s0FsDAZry5Uj2Y-TkjsgGOC
@@ -136,6 +134,7 @@ dhcp-range=10.0.0.10,10.0.0.250,12h:  Client IP address will range from 10.0.0.1
 dhcp-option=3,10.0.0.1:  3 is code for Default Gateway followed by IP of D.G i.e. 10.0.0.1
 dhcp-option=6,10.0.0.1:  6 for DNS Server followed by IP address
 ```
+
 
 
 
