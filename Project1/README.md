@@ -2,6 +2,10 @@
 
 仅供参考,此project为学习之用,了解破解流程,学习无线安全
 
+__author__ == "US579"
+
+仅供参考,此project为学习之用,了解破解流程,学习无线安全
+
 The recording file is in the link below:
 
 https://drive.google.com/open?id=1EdF8AQh95s0FsDAZry5Uj2Y-TkjsgGOC
