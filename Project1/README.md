@@ -71,7 +71,7 @@ airbase-ng -a AA:AA:AA:AA:AA:AA --essid 'Starbucks' -c 11 wlan0mon
 
 -essid : the name of AP ,this should be same as the target WI-FI
 
--c : channel 11
+-c : channel 11 (this is optional)
 
 ## 4. deauth target by using aireplay-ng
 ```
