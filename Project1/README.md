@@ -4,7 +4,7 @@
 
 The recording file is in the link below:
 
-https://drive.google.com/open?id=1EdF8AQh95s0FsDAZry5Uj2Y-TkjsgGOC
+https://drive.google.com/open?id=1o4IqdME3WEvOzLvIsyyu2rsjSgy2o5-v
 
 system : kali linux
 
