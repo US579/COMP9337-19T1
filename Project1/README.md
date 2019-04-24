@@ -232,7 +232,7 @@ socat file:`tty`,raw,echo=0 tcp-listen:4444
 
 ## Authors
 
-US579 
+WANZE LIU
 
 ## License
 
