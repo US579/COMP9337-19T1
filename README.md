@@ -11,25 +11,25 @@ analysis the performence of different encrypt algorithem
 
 WEP carcking and WPA carcking 
 
-* MARK : 100 / 
+* MARK : 100 / 100
 
 ### LAB3
 
 MAN in the middle of attack 
 
-* MARK 100 / 
+* MARK 100 / 100
 
 ### LAB4
 
 analysis the SSL protocol by using wireshark
 
-* MARK : 100 /
+* MARK : 100 / 100
 
 ### LAB4
 
 Snort Penetration test
 
-* MARK : 100 /
+* MARK : 100 / 100
 
 ### Project 1
 
