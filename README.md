@@ -37,7 +37,7 @@ EVIL TWIN ATTACK
 
 the details information is indisde of `project1` file
 
-* MARK : 100 /
+* MARK : 19.83 / 20
 
 
 
